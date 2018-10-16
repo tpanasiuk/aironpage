@@ -170,12 +170,12 @@ nav a:hover .dash {
     font-size: 22px;
 }
 
-.read {
+.a-hover {
     font-size: 13px;
     color: #323232d6;
 }
 
-.read:hover {
+.a-hover a:hover {
     opacity: 0.7;
 }
 
