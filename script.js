@@ -1,3 +1,11 @@
+// Scroll to specific values
+// scrollTo is the same
+window.scroll({
+    top: 1000,
+    behavior: "smooth"
+});
+
+//SLIDER WITH FEEDBACKS
 let slides = document.querySelectorAll('#slides .slide');
 let currentSlide = 0;
 let slideInterval = setInterval(nextSlide,2000);
@@ -8,6 +16,8 @@ function nextSlide() {
     slides[currentSlide].className = 'slide showing';
 }
 
+
+//ACTIVE LINK STYLES
 // Get the container element
 let navContainer = document.getElementById("nav");
 
@@ -29,7 +39,8 @@ for (let i = 0; i < navs.length; i++) {
     });
 }
 
-//top Button
+
+//TOP BUTTON
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
