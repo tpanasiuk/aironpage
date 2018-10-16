@@ -1,18 +1,11 @@
-// Scroll to specific values
-// scrollTo is the same
-window.scroll({
-    top: 1000,
-    behavior: "smooth"
-});
-
 //SLIDER WITH FEEDBACKS
 let slides = document.querySelectorAll('#slides .slide');
 let currentSlide = 0;
-let slideInterval = setInterval(nextSlide,2000);
+let slideInterval = setInterval(nextSlide, 2000);
 
 function nextSlide() {
     slides[currentSlide].className = 'slide';
-    currentSlide = (currentSlide+1)%slides.length;
+    currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].className = 'slide showing';
 }
 
@@ -26,7 +19,7 @@ let navs = navContainer.getElementsByClassName("link");
 
 // Loop through the buttons and add the active class to the current/clicked button
 for (let i = 0; i < navs.length; i++) {
-    navs[i].addEventListener("click", function() {
+    navs[i].addEventListener("click", function () {
         let current = document.getElementsByClassName("active");
 
         // If there's no active class
@@ -42,7 +35,9 @@ for (let i = 0; i < navs.length; i++) {
 
 //TOP BUTTON
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+    scrollFunction()
+};
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -75,34 +70,30 @@ let item5 = document.getElementById("work-item-5");
 let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-item1.onclick = function() {
+item1.onclick = function () {
     modal.style.display = "block";
-}
-
-item2.onclick = function() {
+};
+item2.onclick = function () {
     modal.style.display = "block";
-}
-
-item3.onclick = function() {
+};
+item3.onclick = function () {
     modal.style.display = "block";
-}
-
-item4.onclick = function() {
+};
+item4.onclick = function () {
     modal.style.display = "block";
-}
-
-item5.onclick = function() {
+};
+item5.onclick = function () {
     modal.style.display = "block";
-}
+};
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function () {
     modal.style.display = "none";
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}
+};

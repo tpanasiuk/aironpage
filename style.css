@@ -60,7 +60,6 @@ nav a {
     margin-left: 20px;
 }
 
-
 nav a .dash {
     margin-right: 8px;
     color: #17bed2;
@@ -279,24 +278,18 @@ nav a:hover .dash {
 .bigger-image {
     width: 66.5%;
     height: auto;
-    /*background: url("./img/800x400/01.jpg") fixed;*/
+    transition: all 0.4s;
 }
 
 .smaller-image {
     width: 33%;
     height: auto;
-    /*background: url("./img/397x400/01.jpg") fixed;*/
+    transition: all 0.3s;
 }
 
 .bigger-image:hover, .smaller-image:hover {
     cursor: pointer;
     opacity: 0.5;
-    -webkit-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-    transition-duration: .3s;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(.7,1,.7,1)
 }
 
 .bigger-image img, .smaller-image img {
@@ -308,13 +301,17 @@ nav a:hover .dash {
     margin: 2px;
     height: 350px;
     padding: 70px 45px;
+    transition: all 0.3s;
+    transition-timing-function: ease-in;
+    border: none;
 }
 
-.pricing-item-big {
-    background-color: white;
-    margin: 2px;
-    height: 350px;
-    padding: 110px 45px;
+.pricing-item:focus {
+}
+
+.pricing-item:hover {
+    transform: scale(1.05);
+    border: 1px solid #edf0f2;
 }
 
 #pricing .fas, .far {
@@ -468,12 +465,12 @@ blockquote p {
 
 #topBtn:hover {
     opacity: 0.8;
-    -webkit-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
     transition-duration: .3s;
     transition-property: all;
-    transition-timing-function: cubic-bezier(.7,1,.7,1)
+    transition-timing-function: cubic-bezier(.7, 1, .7, 1)
 }
 
 /* The Modal (background) */
@@ -481,16 +478,16 @@ blockquote p {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 2; /* Sit on top */
-    right:0;
+    right: 0;
     left: 0;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(81,87,105,.4);
+    background-color: rgba(81, 87, 105, .4);
     transition-duration: .3s;
     transition-property: all;
-    transition-timing-function: cubic-bezier(.7,1,.7,1);
+    transition-timing-function: cubic-bezier(.7, 1, .7, 1);
 
 }
 
@@ -506,7 +503,7 @@ blockquote p {
     padding: 30px;
     transition-duration: .3s;
     transition-property: all;
-    transition-timing-function: cubic-bezier(.7,1,.7,1);
+    transition-timing-function: cubic-bezier(.7, 1, .7, 1);
 
     margin: 15% auto; /* 15% from the top and centered */
 }
@@ -519,7 +516,7 @@ blockquote p {
     color: #c5c6cb;
     transition-duration: .3s;
     transition-property: all;
-    transition-timing-function: cubic-bezier(.7,1,.7,1);
+    transition-timing-function: cubic-bezier(.7, 1, .7, 1);
 }
 
 .close:hover,
