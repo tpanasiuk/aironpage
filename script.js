@@ -57,3 +57,52 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+
+//MODAL
+// Get the modal
+let modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+let item1 = document.getElementById("work-item-1");
+let item2 = document.getElementById("work-item-2");
+let item3 = document.getElementById("work-item-3");
+let item4 = document.getElementById("work-item-4");
+let item5 = document.getElementById("work-item-5");
+
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+item1.onclick = function() {
+    modal.style.display = "block";
+}
+
+item2.onclick = function() {
+    modal.style.display = "block";
+}
+
+item3.onclick = function() {
+    modal.style.display = "block";
+}
+
+item4.onclick = function() {
+    modal.style.display = "block";
+}
+
+item5.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

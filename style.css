@@ -288,6 +288,17 @@ nav a:hover .dash {
     /*background: url("./img/397x400/01.jpg") fixed;*/
 }
 
+.bigger-image:hover, .smaller-image:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    transition-duration: .3s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.7,1,.7,1)
+}
+
 .bigger-image img, .smaller-image img {
     width: 100%;
 }
@@ -463,4 +474,82 @@ blockquote p {
     transition-duration: .3s;
     transition-property: all;
     transition-timing-function: cubic-bezier(.7,1,.7,1)
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    right:0;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(81,87,105,.4);
+    transition-duration: .3s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.7,1,.7,1);
+
+}
+
+/* Modal Content/Box */
+.modal-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 730px;
+    height: auto;
+    display: block;
+    background: #fff;
+    padding: 30px;
+    transition-duration: .3s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.7,1,.7,1);
+
+    margin: 15% auto; /* 15% from the top and centered */
+}
+
+/* The Close Button */
+.close {
+    float: right;
+    font-size: 13px;
+    font-weight: 500;
+    color: #c5c6cb;
+    transition-duration: .3s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.7,1,.7,1);
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.inside-modal {
+    display: flex;
+    justify-content: space-between;
+}
+
+h3 {
+    margin: 0;
+}
+
+.inside-modal-left {
+    border-right: 1px solid #edf0f2;
+    padding-right: 20px;
+}
+
+.inside-modal-right {
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #6c6c6ce8;
+}
+
+.inside-modal-right span {
+    font-weight: bolder;
 }
