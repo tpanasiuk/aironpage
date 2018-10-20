@@ -8,23 +8,39 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
           integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 <body>
 <header class="uppercase">
-    <div>
+
+    <nav  id="nav" class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
         <a href="#home"><img src="./img/logo-dark.png" alt="Aironpage"/></a>
-    </div>
-    <div id="nav">
-        <nav>
-            <a href="#home" class="link"><span class="dash">―</span>home</a>
-            <a href="#products" class="link"><span class="dash">―</span>products</a>
-            <a href="#service" class="link"><span class="dash">―</span>service</a>
-            <a href="#work" class="link"><span class="dash">―</span>work</a>
-            <a href="#pricing" class="link"><span class="dash">―</span>pricing</a>
-            <a href="#contact" class="link"><span class="dash">―</span>contact</a>
-        </nav>
-    </div>
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="#home" class="link nav-links"><span class="dash">―</span>home</a>
+            </li>
+            <li>
+                <a href="#products" class="link"><span class="dash">―</span>products</a>
+            </li>
+            <li>
+                <a href="#service" class="link"><span class="dash">―</span>service</a>
+            </li>
+            <li>
+                <a href="#work" class="link"><span class="dash">―</span>work</a>
+            </li>
+            <li>
+                <a href="#pricing" class="link"><span class="dash">―</span>pricing</a>
+            </li>
+            <li>
+                <a href="#contact" class="link"><span class="dash">―</span>contact</a>
+            </li>
+        </ul>
+    </nav>
+
 </header>
 
 <div id="home" class="home center capitalize">
@@ -218,7 +234,7 @@
         </div>
     </div>
 </div>
-<div class="section">
+<div id="reviews" class="section">
     <h2 class="black-text-headlines capitalize">customer reviews</h2>
     <ul id="slides">
         <i class="fas fa-quote-left"></i>

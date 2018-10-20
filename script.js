@@ -97,3 +97,21 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 };
+
+
+//RESPONSIVE NAVBAR
+
+let mainNav = document.getElementById('js-menu');
+let navBarToggle = document.getElementById('js-navbar-toggle');
+
+//SHOW NAVBAR
+navBarToggle.addEventListener('click', function () {
+
+    mainNav.classList.toggle('active-nav');
+});
+
+//REMOVE NAVBAR ON CLICK
+mainNav.addEventListener('click', function () {
+
+    mainNav.classList.remove('active-nav');
+});
