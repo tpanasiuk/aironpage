@@ -469,7 +469,7 @@ blockquote p {
     display: block;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .products-images {
         display: flex;
         justify-content: space-between;
@@ -638,9 +638,9 @@ blockquote p {
 
 }
 
-@media screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) {
     .section {
-        padding: 100px 0 100px 0;
+        padding: 10px 0;
     }
 
     header {
@@ -656,19 +656,19 @@ blockquote p {
     }
 }
 
-@media screen and (max-width: 768px) {
-    #home {
-        height: 50vh;
-        background-size: cover;
-        background: url(./img/1920x1080/01.jpg) no-repeat center;
-        text-align: center;
-        font-size: 30px;
-        color: white;
-        opacity: 0.85;
-    }
+@media only screen and (max-width: 768px) {
 
     #work img {
         width: 100%;
         height: auto;
+    }
+
+    .modal {
+        display: none; /* Hidden by default */
+
+    }
+
+    #slides {
+        margin: 0px 0px 80px 10px;
     }
 }
