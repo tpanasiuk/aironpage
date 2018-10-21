@@ -1,4 +1,4 @@
-//SLIDER WITH FEEDBACKS
+//SLIDER WITH REVIEWS
 let slides = document.querySelectorAll('#slides .slide');
 let currentSlide = 0;
 let slideInterval = setInterval(nextSlide, 2000);
