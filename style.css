@@ -15,6 +15,11 @@ h1, h3 {
     margin: 0;
 }
 
+h4 {
+    font-weight: 700;
+    font-size: 22px;
+}
+
 .bold {
     font-weight: bolder;
 }
@@ -66,7 +71,7 @@ nav a .dash {
     vertical-align: text-bottom;
 }
 
-nav a:hover .dash {
+.active .dash {
     color: #17bed2;
     visibility: visible;
     margin-right: 8px;
@@ -81,14 +86,13 @@ nav a:hover .dash {
     height: 100vh;
     background-size: cover;
     background: url(./img/1920x1080/01.jpg) no-repeat center;
-    margin-top: 100px;
     text-align: center;
     font-size: 30px;
     color: white;
     opacity: 0.85;
 }
 
-#home button {
+#home a {
     background-color: white;
     border: none;
     color: black;
@@ -99,17 +103,9 @@ nav a:hover .dash {
     font-size: 14px;
 }
 
-#home button:hover {
-    background-color: #52bcce;
-    border: none;
-    color: white;
-    padding: 20px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.3s;
+#home button {
+    padding: 0;
+    margin: 0;
 }
 
 #home .fas {
@@ -126,6 +122,8 @@ nav a:hover .dash {
 
 .section h2 {
     font-size: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .center {
@@ -158,10 +156,6 @@ nav a:hover .dash {
 .a-hover {
     font-size: 13px;
     color: #323232d6;
-}
-
-.a-hover a:hover {
-    opacity: 0.7;
 }
 
 .dash {
@@ -210,12 +204,6 @@ nav a:hover .dash {
     cursor: pointer;
 }
 
-.service-item:hover i {
-    display: none;
-    transition: 1s;
-    cursor: pointer;
-}
-
 .service-item .fas, .far {
     font-size: 30px;
     opacity: 0.5;
@@ -239,6 +227,7 @@ nav a:hover .dash {
 .display-result {
     height: 50vh;
     background: url(./img/1920x1080/02.jpg) fixed center no-repeat;
+    background-size: cover;
     opacity: 0.85;
     color: white;
 }
@@ -261,7 +250,6 @@ nav a:hover .dash {
     transition-timing-function: ease-in;
     border: none;
 }
-
 
 #pricing .fas, .far {
     font-size: 30px;
@@ -318,6 +306,80 @@ blockquote p {
     font-size: 17px;
     font-weight: lighter;
     color: #a6a7aa;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(81, 87, 105, .4);
+    transition-duration: .3s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.7, 1, .7, 1);
+
+}
+
+/* Modal Content/Box */
+.modal-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 730px;
+    height: auto;
+    display: block;
+    background: #fff;
+    padding: 30px;
+    transition-duration: .3s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.7, 1, .7, 1);
+
+    margin: 15% auto; /* 15% from the top and centered */
+}
+
+/* The Close Button */
+.close {
+    float: right;
+    font-size: 13px;
+    font-weight: 500;
+    color: #c5c6cb;
+    transition-duration: .3s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.7, 1, .7, 1);
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.inside-modal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inside-modal-left {
+    border-right: 1px solid #edf0f2;
+    padding-right: 20px;
+}
+
+.inside-modal-right {
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #6c6c6ce8;
+}
+
+.inside-modal-right span {
+    font-weight: bolder;
 }
 
 #slides {
@@ -430,7 +492,6 @@ blockquote p {
     transition-timing-function: cubic-bezier(.7, 1, .7, 1)
 }
 
-
 .navbar {
     box-sizing: border-box;
 }
@@ -469,13 +530,42 @@ blockquote p {
     display: block;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
+
+    nav a:hover .dash {
+        color: #17bed2;
+        visibility: visible;
+        margin-right: 8px;
+        font-weight: bold;
+        transition-duration: .4s;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(.7, 1, .7, 1);
+        vertical-align: text-bottom;
+    }
+
+    #home a:hover {
+        background-color: #52bcce;
+        border: none;
+        color: white;
+        padding: 20px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
     .products-images {
         display: flex;
         justify-content: space-between;
         align-items: center;
         text-align: left;
 
+    }
+
+    .a-hover a:hover {
+        opacity: 0.7;
     }
 
     .product-image {
@@ -531,6 +621,11 @@ blockquote p {
         border: 1px solid #edf0f2;
     }
 
+    .service-item:hover i {
+        display: none;
+        transition: 1s;
+        cursor: pointer;
+    }
 
     .navbar {
         display: flex;
@@ -549,93 +644,6 @@ blockquote p {
         display: none;
     }
 
-    .active .dash {
-        color: #17bed2;
-        visibility: visible;
-        margin-right: 8px;
-        font-weight: bold;
-        transition-duration: .4s;
-        transition-property: all;
-        transition-timing-function: cubic-bezier(.7, 1, .7, 1);
-        vertical-align: text-bottom;
-    }
-
-    /* The Modal (background) */
-    .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 2; /* Sit on top */
-        right: 0;
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgba(81, 87, 105, .4);
-        transition-duration: .3s;
-        transition-property: all;
-        transition-timing-function: cubic-bezier(.7, 1, .7, 1);
-
-    }
-
-    /* Modal Content/Box */
-    .modal-content {
-        position: absolute;
-        left: 0;
-        right: 0;
-        width: 730px;
-        height: auto;
-        display: block;
-        background: #fff;
-        padding: 30px;
-        transition-duration: .3s;
-        transition-property: all;
-        transition-timing-function: cubic-bezier(.7, 1, .7, 1);
-
-        margin: 15% auto; /* 15% from the top and centered */
-    }
-
-    /* The Close Button */
-    .close {
-        float: right;
-        font-size: 13px;
-        font-weight: 500;
-        color: #c5c6cb;
-        transition-duration: .3s;
-        transition-property: all;
-        transition-timing-function: cubic-bezier(.7, 1, .7, 1);
-    }
-
-    .close:hover,
-    .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    .inside-modal {
-        display: flex;
-        justify-content: space-between;
-    }
-
-
-    .inside-modal-left {
-        border-right: 1px solid #edf0f2;
-        padding-right: 20px;
-    }
-
-    .inside-modal-right {
-        padding-left: 20px;
-        font-size: 15px;
-        font-weight: lighter;
-        color: #6c6c6ce8;
-    }
-
-    .inside-modal-right span {
-        font-weight: bolder;
-    }
-
-
 }
 
 @media only screen and (max-width: 992px) {
@@ -643,25 +651,46 @@ blockquote p {
         padding: 80px 0;
     }
 
-    header {
-        padding: 35px 50px 35px 50px;
-    }
-
-    header ul {
-        padding-left: 0;
-    }
-
     li a {
         margin-left: 5px;
     }
 
+    #home p {
+        padding: 0 5px;
+    }
+
+    header {
+        padding: 20px 50px 20px 50px;
+    }
+
+    #home {
+        margin-top: 80px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
 
+    header {
+        padding: 20px 50px 20px 50px;
+    }
+
+    #home {
+        margin-top: 80px;
+    }
+
     #work img {
         width: 100%;
         height: auto;
+    }
+
+    #service, #products, #pricing {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .display-result {
+        height: 70vh;
+
     }
 
     .modal {
@@ -673,5 +702,40 @@ blockquote p {
         margin: 0px 0px 80px 10px;
     }
 
+    .navbar-toggle {
+        top: 25px;
+    }
+
+    header ul {
+        padding-left: 0;
+        margin: 0;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        top: 30px;
+        width: 95%;
+        padding: 0;
+    }
+
+    .modal-content-inside {
+        padding: 30px;
+    }
+
+    /* The Close Button */
+    .close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+
+    #footer {
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: right;
+    }
 
 }
