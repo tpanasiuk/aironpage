@@ -43,7 +43,7 @@ h4 {
 }
 
 header {
-    padding: 35px 10% 35px 10%;
+    padding: 25px 10% 25px 10%;
     border-radius: 10px;
     position: fixed;
     top: 0;
@@ -470,15 +470,14 @@ blockquote p {
     background: #515769;
     border-radius: 3px;
     padding: 5px;
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
 }
 
 #topBtn:hover {

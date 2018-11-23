@@ -11,23 +11,18 @@ function nextSlide() {
 
 
 //ACTIVE LINK STYLES
-// Get the container element
 let navContainer = document.getElementById("nav");
 
-// Get all buttons with class="btn" inside the container
 let navs = navContainer.getElementsByClassName("link");
 
-// Loop through the buttons and add the active class to the current/clicked button
 for (let i = 0; i < navs.length; i++) {
     navs[i].addEventListener("click", function () {
         let current = document.getElementsByClassName("active");
 
-        // If there's no active class
         if (current.length > 0) {
             current[0].className = current[0].className.replace(" active", "");
         }
 
-        // Add the active class to the current/clicked button
         this.className += " active";
     });
 }
@@ -55,10 +50,8 @@ function topFunction() {
 
 
 //MODAL
-// Get the modal
 let modal = document.getElementById('myModal');
 
-// Get the button that opens the modal
 let item1 = document.getElementById("work-item-1");
 let item2 = document.getElementById("work-item-2");
 let item3 = document.getElementById("work-item-3");
